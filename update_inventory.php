@@ -27,9 +27,9 @@ function sendTelegramNotification($message) {
 
 // Function to check stock levels and send appropriate notification
 function checkStockAndNotify($product_name, $quantity_in_stock, $supplier_name) {
-    if ($quantity_in_stock > 5) {
+    if ($quantity_in_stock > 10) {
         $message = "Product: $product_name (Supplier: $supplier_name) - In Stock: Sufficient stock available.";
-    } elseif ($quantity_in_stock >= 1 && $quantity_in_stock <= 5) {
+    } elseif ($quantity_in_stock >= 1 && $quantity_in_stock <= 10) {
         $message = "Product: $product_name (Supplier: $supplier_name) - Low Stock: Only $quantity_in_stock items left!";
     } else {
         $message = "Product: $product_name (Supplier: $supplier_name) - Out of Stock: This item is currently unavailable!";

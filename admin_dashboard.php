@@ -392,7 +392,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     echo "telegramMessage += 'Product: " . addslashes($product['product_name']) . ", Status: Out of Stock. Please order this product.\\n';";
                 }
                 // If stock is below 5 but greater than 0, show "Low Stock"
-                elseif ($product['quantity_in_stock'] < 5) {
+                elseif ($product['quantity_in_stock'] < 10) {
                     echo "lowStockMessage += 'Product: " . addslashes($product['product_name']) . ", Status: Low Stock (" . $product['quantity_in_stock'] . ")\\n';";
                     echo "telegramMessage += 'Product: " . addslashes($product['product_name']) . ", Status: Low Stock (" . $product['quantity_in_stock'] . ")\\n';";
                 }
